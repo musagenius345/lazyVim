@@ -7,3 +7,6 @@ vim.api.nvim_set_keymap("i", "kj", "<Esc>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("i", "jk", "<Esc>", { noremap = true, silent = true })
 
 vim.keymap.set("n", "<C-s>", ":w!<cr>", { desc = "Save File" })
+-- Toggle Neotree and switch focus between Neotree and buffer
+
+-- vim.api.nvim_set_keymap("n", "<C-o>", ":NERDTreeToggle<CR>", { noremap = true, silent = true })
