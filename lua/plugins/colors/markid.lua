@@ -1,6 +1,8 @@
-greturn({
+return {
   "David-Kunz/markid",
-  require("nvim-treesitter.configs").setup({
-    markid = { enable = true },
-  }),
-})
+  config = function()
+    require("nvim-treesitter.configs").setup({
+      markid = { enable = true },
+    })
+  end,
+}

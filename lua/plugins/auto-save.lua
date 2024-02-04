@@ -1,6 +1,6 @@
 return {
-	-- "Pocco81/auto-save.nvim",
-	"zoriya/auto-save.nvim", -- HACK: use fork until PR is accepted
+	"Pocco81/auto-save.nvim",
+	-- "zoriya/auto-save.nvim", -- HACK: use fork until PR is accepted
 	event = { "InsertEnter" },
 	opts = {
 		callbacks = {

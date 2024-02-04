@@ -15,7 +15,7 @@ return {
 		mason_null_ls.setup({
 			ensure_installed = {
 				"prettier", -- prettier formatter
-				-- "stylua", -- lua formatter
+				"stylua", -- lua formatter
 				"eslint_d", -- js linter
 			},
 		})
@@ -36,7 +36,7 @@ return {
 				--  to disable file types use
 				--  "formatting.prettier.with({disabled_filetypes: {}})" (see null-ls docs)
 				formatting.prettier.with({
-					extra_filetypes = { "svelte" },
+					-- extra_filetypes = { "svelte" },
 				}), -- js/ts formatter
 				-- formatting.stylua, -- lua formatter
 				diagnostics.eslint_d.with({ -- js/ts linter

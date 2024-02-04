@@ -16,9 +16,9 @@ return {
 
     local opts = { noremap = true, silent = true }
     local on_attach = function(client, bufnr)
-    opts.buffer = bufnr
+      opts.buffer = bufnr
 
-   -- set keybinds
+      -- set keybinds
       opts.desc = "Show LSP references"
       keymap.set("n", "gR", "<cmd>Telescope lsp_references<CR>", opts) -- show definition, references
 
@@ -101,12 +101,12 @@ return {
         on_attach(client, bufnr)
 
         -- configure CSS server for .svelte files
-    if client.name == "svelte" then
-      lspconfig["cssls"].setup({
-        capabilities = capabilities,
-        on_attach = on_attach,
-      })
-    end
+        if client.name == "svelte" then
+          lspconfig["cssls"].setup({
+            capabilities = capabilities,
+            on_attach = on_attach,
+          })
+        end
         vim.api.nvim_create_autocmd("BufWritePost", {
           pattern = { "*.js", "*.ts", "*.css" },
           callback = function(ctx)
@@ -135,7 +135,7 @@ return {
     lspconfig["emmet_ls"].setup({
       capabilities = capabilities,
       on_attach = on_attach,
-      filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "svelte" },
+      filetypes = { "html", "ejs", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "svelte" },
     })
 
     -- configure lua server (with special settings)
